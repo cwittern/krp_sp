@@ -1,0 +1,14 @@
+#+TITLE:  Experiments with Kanseki Repository and sentencepiece
+
+* Install
+
+  - The python scripts use version 3.5.1
+  - install dependencies
+#+BEGIN_SRC 
+pip install -r requirements.txt
+#+END_SRC
+  - make the corpus files
+#+BEGIN_SRC 
+bash scripts/makecorpus.sh
+#+END_SRC
+
