@@ -12,3 +12,6 @@ pip install -r requirements.txt
 bash scripts/makecorpus.sh
 #+END_SRC
 
+UPDATE: Since GitHub rejected the corpus files as too large, they are
+not included here. Instructions to create the corpus in
+scripts/mkcorpus.py
