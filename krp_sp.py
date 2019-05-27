@@ -157,19 +157,25 @@ def loadsamples(cnt=5, length=100):
     cdir="%s/data" % (sp_path)
     ss=[]
     cs=[a for a in os.listdir(cdir) if a.endswith(".txt")]
-    cs.sort()
-    for c in cs:
-        sl=[]
-        corpus="%s/%s" % (cdir, c)        
-        ls = codecs.open(corpus, "r", "utf-8").read()
-        for s in sample(range(len(ls) - length), cnt):
-            end = s + length
-            sstr = ls[s:end]
-            sstr = sstr.replace("\n", "")
-            sl.append(sstr)
-        ss.append(sl)
-    mn=[krp_names[a.split(".")[0]] for a in cs]
-    return list(zip(mn, ss))
+    if len(cs) == 0:
+        import json
+        with open('data/sample_data.json') as json_file:  
+            data = json.load(json_file)        
+        return data    
+    else:
+        cs.sort()
+        for c in cs:
+            sl=[]
+            corpus="%s/%s" % (cdir, c)        
+            ls = codecs.open(corpus, "r", "utf-8").read()
+            for s in sample(range(len(ls) - length), cnt):
+                end = s + length
+                sstr = ls[s:end]
+                sstr = sstr.replace("\n", "")
+                sl.append(sstr)
+            ss.append(sl)
+        mn=[krp_names[a.split(".")[0]] for a in cs]
+        return list(zip(mn, ss))
                       
 def getbest(md, sntc, mv=None, cnt=3):
     """Get the best result for the sentence provided. Optionally, return cnt results. md is the loaded list of models. Optionally provide a list with log values in mv."""
