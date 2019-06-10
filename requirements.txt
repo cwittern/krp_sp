@@ -68,6 +68,7 @@ pyparsing==2.2.0
 pysolr==3.6.0
 pystache==0.5.4
 python-dateutil==2.6.1
+python-louvain==0.13
 python-utils==2.2.0
 pytz==2017.3
 pyuca==1.2

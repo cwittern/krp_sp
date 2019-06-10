@@ -1,7 +1,9 @@
 #  -*- coding: utf-8 -*-
-import sys, os, codecs
+import sys, os, codecs, math
 import sentencepiece as spm
+import numpy as np
 from random import sample
+from collections import defaultdict
 
 #sp_path = os.path.dirname(os.path.realpath(sys.argv[0]))
 
@@ -193,8 +195,91 @@ def getbest(md, sntc, mv=None, cnt=3):
         resx=sorted(res, key=lambda x: x[1])
     return [a[0] for a in resx[0:cnt]]
     
+def agg_voclist(mv, md, w=None):
+    """mv is the list of voclist returned by loadmodels, w can be
+    - 'score' : get the log score for each entry and add it to the entry, which thus becomes a tuple
+    - 'pos' : use the id number (which is the position in the voclist)
+    - None  : dont use any weight.  
+    returns a dictionary of lists, one entry for each sp (with score option):
+    {'好施' :
+    [(13, -11.637325286865234),
+    (16, -11.83456039428711),
+    (18, -10.804060935974121),
+    (20, -11.320064544677734),
+    (40, -12.115601539611816),
+    (41, -11.592039108276367),
+    (42, -11.932478904724121),
+    (56, -12.036428451538086),
+    (72, -12.097436904907227)]}
+    """
+    vx=defaultdict(list)
+    for i, vl in enumerate(mv):
+        for j, v in enumerate(vl):
+            # j is the id of this sp in this model
+            if w is None:
+                vx[v].append(i)
+            else:
+                if w == 'score':
+                    sc = md[i].GetScore(j)
+                elif w == 'pos':
+                    sc = j
+                vx[v].append((i, sc))
+    return vx
 
+def red_voclist(vx, up=40, lo=20):
+    """Reduce the aggregate voclist by giving upper and lower limits for
+the number of occurrences. Returns a list of key, value items, not a
+dictionary, this can be converted to a dictionary with dict().
+    """
+    v2 = [a for a in vx.items() if len(a[1]) > lo and len(a[1]) < up]
+    return v2
 
+def vocmatrix(vx, size=75, vsize=30000, w=None):
+    """Converts the aggregated voclist into a matrix."""
+    sx=np.zeros((size,size))
+    for v in vx:
+        for b in v[1]:
+            if isinstance(b, int):
+                bu = b
+            else:
+                bu = b[0]
+            for b1 in v[1]:
+                if isinstance(b1, int):
+                    bu1 = b1
+                else:
+                    bu1 = b1[0]
+                # I only want to see one half of the matrix
+                if bu < bu1:
+                    # only count
+                    if w is None:
+                        sx[bu, bu1] += 1
+                    else:
+                        if w == 'score':
+                            # we add the probabilities
+                            px = math.exp(b[1]) + math.exp(b1[1])
+                        else:
+                            # we use position, but invert the size
+                            px = ( (vsize - b[1]) + (vsize - b1[1])) / 2
+                        sx[bu, bu1] += px
+    return sx
+
+def evalvocmatrix(sx, ms, cutoff=10):
+    s1, s2 = sx.shape
+    res={}
+    for n in range(s1):
+        o = []
+        for i in range(s2):
+            if n < i:
+                try:
+                    o.append((ms[i], sx[n, i]))
+                except:
+                    print("ERROR:", i, n, sx.shape, len(ms))
+                    
+            else:
+                o.append((ms[i], sx[i, n]))
+        o = sorted(o, key = lambda x : x[1], reverse=True)
+        res[ms[n]] = o[0:cutoff]
+    return res
 #makemodels()
 
 
