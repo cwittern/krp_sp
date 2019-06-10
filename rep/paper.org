@@ -65,5 +65,61 @@
 [[./vsize-hist-20000.png]]
   
 
-For all subcategories 部類 in a category 部, for the 10 most similar subcategories, a same/other calculation is performed, the maximal score is thus 10 times the number of the subcategories for a given category.
+** From list to network
 
+There are many ways to combine the vocabulary lists to form a network.  Here we will consider every subcategory 部類 as a node, co-occurrence of two items in the vocabulary lists of two subcategory as an edge.  The weight of this edge again can be calculated in different ways. Here we consider three possibilities:
+  - *Count*: Co-occurrences are simply counted: For every co-occurrence the
+    weight counter for the edge between a node-pair is increased.
+  - *Prob.*: Probabilities of the two sentencepieces, as they occur in their
+    respective subcategory. Here we simply add these probabilities.
+  - *Pos*: Position of the sentencepieces in the vocabulary list.  Since the
+    vocabulary list is sorted by probability, the position is an
+    indicator of the probability, but increases much faster than the
+    probability, thus we increase the scale, although in a non-linear
+    manner.  Here we assign the highest value to the first position
+    and then decrease for every piece in the list.  The combined value
+    for position is the mean of the individual values.
+
+In addition to using various values of weight for the network edges,
+we can also limit the edges based on how many subcategories they occur
+in.  In the terms of Figure 1 and 2, we can consider an edge only
+relevant if it occurs more frequent or less frequent than a
+tresholds. We use different upper and lower limits, to see how the
+relative frequency of the co-occurrence contributes to forming a
+meaningful network.
+
+* Evaluation
+
+** Self/other score
+
+It is difficult to evaluate the results of these calculations.  As
+preliminary result, we did 18 calculations for different values of
+vocabulary size (20000 and 30000), upper and lower limits (70/35,
+30/5, 3/1) and combined this with the above mentioned score for the
+weight of edges.  Based on the proximity, for every subcategory, we
+list the 10 closest subcategories.  As a first approximation (and
+since this is relative easy calculated), we consider how many
+subcategories from the same category for a given subcategory.  From
+this, we produced 18 tables that list the Self/Other score and the 10
+top subcategories for each of the values.
+For all subcategories 部類 in a category 部, for the 10 most similar
+subcategories, a same/other calculation is performed, the maximal
+score is thus 10 times the number of the subcategories for a given
+category.
+
+In addition, to get a better overview, we created [[http:sp-self-other-results.html][summary tables]] for
+all 6 top categories.  These tables show how they perform in each
+calculation and allow for easier comparison.
+
+** Network analysis: Community detection
+
+There are many ways to detect communities, that is, sub-networks with a strong mutual relation.  Here we will use the louvain algorithm[1], which proved to be the best performing algorithm in [2]
+
+
+
+
+* Bibliograpy
+
+[1] Blondel et.al (2008) [[https://pdfs.semanticscholar.org/b434/c0199bbf38163abd5f995e76aa1619d39db9.pdf][Fast unfolding of communities in large networks]]
+
+[2] Emmons et. al. (2016) [[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159161][Analysis of Network Clustering Algorithms and Cluster Quality Metrics at Scale]]

@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-06-10 Mon 13:36 -->
+<!-- 2019-06-10 Mon 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Analyzing the categories of the Kanseki Repository</title>
@@ -233,18 +232,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7f0942f">1. Overview</a></li>
-<li><a href="#org8f9df67">2. Method</a>
+<li><a href="#org9172e72">1. Overview</a></li>
+<li><a href="#org79badfd">2. Method</a>
 <ul>
-<li><a href="#org8b71e92">2.1. The vocabulary list</a></li>
+<li><a href="#org773c0ac">2.1. The vocabulary list</a></li>
+<li><a href="#orgf334157">2.2. From list to network</a></li>
 </ul>
 </li>
+<li><a href="#org42a7768">3. Evaluation</a>
+<ul>
+<li><a href="#org479df23">3.1. Self/other score</a></li>
+<li><a href="#orgabfdf87">3.2. Network analysis: Community detection</a></li>
+</ul>
+</li>
+<li><a href="#org1230bea">4. Bibliograpy</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7f0942f" class="outline-2">
-<h2 id="org7f0942f"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-org9172e72" class="outline-2">
+<h2 id="org9172e72"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this paper, an attempt is made to see how the traditional
@@ -255,8 +262,8 @@ done using the Kanseki Repository as an example.
 </div>
 </div>
 
-<div id="outline-container-org8f9df67" class="outline-2">
-<h2 id="org8f9df67"><span class="section-number-2">2</span> Method</h2>
+<div id="outline-container-org79badfd" class="outline-2">
+<h2 id="org79badfd"><span class="section-number-2">2</span> Method</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Most of the texts in the KR are not punctuated, and none of them are
@@ -292,8 +299,8 @@ influence the vocabulary size might have on the outcome.
 </p>
 </div>
 
-<div id="outline-container-org8b71e92" class="outline-3">
-<h3 id="org8b71e92"><span class="section-number-3">2.1</span> The vocabulary list</h3>
+<div id="outline-container-org773c0ac" class="outline-3">
+<h3 id="org773c0ac"><span class="section-number-3">2.1</span> The vocabulary list</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 The KR is organized in 6 large categories, which each have
@@ -310,29 +317,128 @@ subcategories contained the entry.  Some of the entries occur in all
 75 subcategories, while most are only recorded in one.  The number
 of co-occurrences across subcategories can be seen as an indicator
 of how specific or common a sentencepiece is.  Figure 1 and 2 show a
-histogram of distributions.
+histogram of distributions<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
 </p>
 
 
-<div id="orgb7283c7" class="figure">
+<div id="orgac98399" class="figure">
 <p><img src="./vsize-hist-30000.png" alt="vsize-hist-30000.png" height="200px" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Vocabulary size distribution for vs=30000</p>
 </div>
 
 
-<div id="orga7ba376" class="figure">
+<div id="org0002360" class="figure">
 <p><img src="./vsize-hist-20000.png" alt="vsize-hist-20000.png" height="200px" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Vocabulary size distribution for vs=20000</p>
 </div>
 </div>
 </div>
+
+
+<div id="outline-container-orgf334157" class="outline-3">
+<h3 id="orgf334157"><span class="section-number-3">2.2</span> From list to network</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+There are many ways to combine the vocabulary lists to form a network.  Here we will consider every subcategory 部類 as a node, co-occurrence of two items in the vocabulary lists of two subcategory as an edge.  The weight of this edge again can be calculated in different ways. Here we consider three possibilities:
+</p>
+<ul class="org-ul">
+<li><b>Count</b>: Co-occurrences are simply counted: For every co-occurrence the
+weight counter for the edge between a node-pair is increased.</li>
+<li><b>Prob.</b>: Probabilities of the two sentencepieces, as they occur in their
+respective subcategory. Here we simply add these probabilities.</li>
+<li><b>Pos</b>: Position of the sentencepieces in the vocabulary list.  Since the
+vocabulary list is sorted by probability, the position is an
+indicator of the probability, but increases much faster than the
+probability, thus we increase the scale, although in a non-linear
+manner.  Here we assign the highest value to the first position
+and then decrease for every piece in the list.  The combined value
+for position is the mean of the individual values.</li>
+</ul>
+
+<p>
+In addition to using various values of weight for the network edges,
+we can also limit the edges based on how many subcategories they occur
+in.  In the terms of Figure 1 and 2, we can consider an edge only
+relevant if it occurs more frequent or less frequent than a
+tresholds. We use different upper and lower limits, to see how the
+relative frequency of the co-occurrence contributes to forming a
+meaningful network.
+</p>
 </div>
 </div>
+</div>
+
+<div id="outline-container-org42a7768" class="outline-2">
+<h2 id="org42a7768"><span class="section-number-2">3</span> Evaluation</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org479df23" class="outline-3">
+<h3 id="org479df23"><span class="section-number-3">3.1</span> Self/other score</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+It is difficult to evaluate the results of these calculations.  As
+preliminary result, we did 18 calculations for different values of
+vocabulary size (20000 and 30000), upper and lower limits (70/35,
+30/5, 3/1) and combined this with the above mentioned score for the
+weight of edges.  Based on the proximity, for every subcategory, we
+list the 10 closest subcategories.  As a first approximation (and
+since this is relative easy calculated), we consider how many
+subcategories from the same category for a given subcategory.  From
+this, we produced 18 tables that list the Self/Other score and the 10
+top subcategories for each of the values.
+For all subcategories 部類 in a category 部, for the 10 most similar
+subcategories, a same/other calculation is performed, the maximal
+score is thus 10 times the number of the subcategories for a given
+category.
+</p>
+
+<p>
+In addition, to get a better overview, we created <a href="http:sp-self-other-results.html">summary tables</a> for
+all 6 top categories.  These tables show how they perform in each
+calculation and allow for easier comparison.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabfdf87" class="outline-3">
+<h3 id="orgabfdf87"><span class="section-number-3">3.2</span> Network analysis: Community detection</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+There are many ways to detect communities, that is, sub-networks with a strong mutual relation.  Here we will use the louvain algorithm[1], which proved to be the best performing algorithm in [2]
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org1230bea" class="outline-2">
+<h2 id="org1230bea"><span class="section-number-2">4</span> Bibliograpy</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+[1] Blondel et.al (2008) <a href="https://pdfs.semanticscholar.org/b434/c0199bbf38163abd5f995e76aa1619d39db9.pdf">Fast unfolding of communities in large networks</a>
+</p>
+
+<p>
+[2] Emmons et. al. (2016) <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159161">Analysis of Network Clustering Algorithms and Cluster Quality Metrics at Scale</a>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">In both cases, the values for 1 to 4 have been cut off to avoid distortion of the graph.</div></div>
+
+
+</div>
+</div></div>
 <div id="ox-postamble" class="status">
 <p class="author">Author: Christian Witterm</p>
-<p class="date">Created: 2019-06-10 Mon 13:36</p>
+<p class="date">Created: 2019-06-10 Mon 18:01</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
