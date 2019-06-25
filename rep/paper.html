@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-06-10 Mon 18:01 -->
+<!-- 2019-06-24 Mon 18:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Analyzing the categories of the Kanseki Repository</title>
@@ -230,26 +233,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9172e72">1. Overview</a></li>
-<li><a href="#org79badfd">2. Method</a>
+<li><a href="#org515e387">1. Overview</a></li>
+<li><a href="#orgf9a0e62">2. Method</a>
 <ul>
-<li><a href="#org773c0ac">2.1. The vocabulary list</a></li>
-<li><a href="#orgf334157">2.2. From list to network</a></li>
+<li><a href="#org461e144">2.1. Sentencepiece</a>
+<ul>
+<li><a href="#org6dbe7e2">2.1.1. The vocabulary list</a></li>
 </ul>
 </li>
-<li><a href="#org42a7768">3. Evaluation</a>
-<ul>
-<li><a href="#org479df23">3.1. Self/other score</a></li>
-<li><a href="#orgabfdf87">3.2. Network analysis: Community detection</a></li>
+<li><a href="#org9155316">2.2. N-gram</a></li>
+<li><a href="#org07fbb43">2.3. From list to network</a></li>
 </ul>
 </li>
-<li><a href="#org1230bea">4. Bibliograpy</a></li>
+<li><a href="#org423107d">3. Evaluation</a>
+<ul>
+<li><a href="#org4e89c91">3.1. Self/other score</a></li>
+<li><a href="#org26498ac">3.2. Evaluation based on standard table</a></li>
+<li><a href="#org9bf8c90">3.3. Network analysis: Community detection</a></li>
+<li><a href="#orgc1ff25a">3.4. Evaluation for ngram</a></li>
+</ul>
+</li>
+<li><a href="#org0fd9fcd">4. Bibliograpy</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9172e72" class="outline-2">
-<h2 id="org9172e72"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-org515e387" class="outline-2">
+<h2 id="org515e387"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this paper, an attempt is made to see how the traditional
@@ -260,15 +270,20 @@ done using the Kanseki Repository as an example.
 </div>
 </div>
 
-<div id="outline-container-org79badfd" class="outline-2">
-<h2 id="org79badfd"><span class="section-number-2">2</span> Method</h2>
+<div id="outline-container-orgf9a0e62" class="outline-2">
+<h2 id="orgf9a0e62"><span class="section-number-2">2</span> Method</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Most of the texts in the KR are not punctuated, and none of them are
 tokenized. To eliminate the problem of tokenization, for this
-research the tool sentencepiece is used.
+research the tool sentencepiece is used. However, to test for the
+suitability of the tool, a comparison with ngrams is also performed.
 </p>
+</div>
 
+<div id="outline-container-org461e144" class="outline-3">
+<h3 id="org461e144"><span class="section-number-3">2.1</span> Sentencepiece</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 Sentencepiece, developped by researchers at Google, Inc., uses
 stochastic methods to find the n most frequent adjoining character
@@ -297,9 +312,9 @@ influence the vocabulary size might have on the outcome.
 </p>
 </div>
 
-<div id="outline-container-org773c0ac" class="outline-3">
-<h3 id="org773c0ac"><span class="section-number-3">2.1</span> The vocabulary list</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org6dbe7e2" class="outline-4">
+<h4 id="org6dbe7e2"><span class="section-number-4">2.1.1</span> The vocabulary list</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <p>
 The KR is organized in 6 large categories, which each have
 subcategories of varying numbers, altogether there are 75
@@ -314,30 +329,63 @@ For each of these entries in the list, we recorded wich
 subcategories contained the entry.  Some of the entries occur in all
 75 subcategories, while most are only recorded in one.  The number
 of co-occurrences across subcategories can be seen as an indicator
-of how specific or common a sentencepiece is.  Figure 1 and 2 show a
-histogram of distributions<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+of how specific or common a sentencepiece is.  Figure 1 shows 
+histograms of distributions<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
 </p>
 
 
-<div id="orgac98399" class="figure">
-<p><img src="./vsize-hist-30000.png" alt="vsize-hist-30000.png" height="200px" />
+<div id="orgdfc513e" class="figure">
+<p><img src="./vsize-hist-10000.png" alt="vsize-hist-10000.png" height="300px" />
 </p>
-<p><span class="figure-number">Figure 1: </span>Vocabulary size distribution for vs=30000</p>
+<p><span class="figure-number">Figure 1: </span>Number of co-occurrences of vocabulary in bulei, for different sizes of the vocabulary</p>
 </div>
 
 
-<div id="org0002360" class="figure">
-<p><img src="./vsize-hist-20000.png" alt="vsize-hist-20000.png" height="200px" />
+<p>
+Another item of interest could be the distribution of length of the
+vocabulary items for different values of the size. Figure 2 shows
+such distributions for different vocabulary sizes.  It seems that the
+maximum value for the length is 16.
 </p>
-<p><span class="figure-number">Figure 2: </span>Vocabulary size distribution for vs=20000</p>
+
+
+<div id="orgf7b20f4" class="figure">
+<p><img src="./vlength-hist.png" alt="vlength-hist.png" height="300px" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Length of sentencepiece items for different vocabulary sizes.</p>
+</div>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgf334157" class="outline-3">
-<h3 id="orgf334157"><span class="section-number-3">2.2</span> From list to network</h3>
+
+<div id="outline-container-org9155316" class="outline-3">
+<h3 id="org9155316"><span class="section-number-3">2.2</span> N-gram</h3>
 <div class="outline-text-3" id="text-2-2">
+<p>
+Using n-gram as alternative, here with n of 2, 3, 4 and 5. First we
+look at the distribution of co-occurrences, as shown in Figure 3.
+In this case, the number of ngrams considered has been capped at
+the most frequent 30000. Compared to the sentencepiece values in
+Figure 1, the curve is much more regular, without the long stretch
+of almost identical values between 35 and 70.
+</p>
+
+
+<div id="orgd68e9ca" class="figure">
+<p><img src="./ngram-hist-30000.png" alt="ngram-hist-30000.png" height="300px" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Number of co-occurrences of ngram in bulei, for different values of n.</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org07fbb43" class="outline-3">
+<h3 id="org07fbb43"><span class="section-number-3">2.3</span> From list to network</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 There are many ways to combine the vocabulary lists to form a network.  Here we will consider every subcategory 部類 as a node, co-occurrence of two items in the vocabulary lists of two subcategory as an edge.  The weight of this edge again can be calculated in different ways. Here we consider three possibilities:
 </p>
@@ -368,17 +416,17 @@ meaningful network.
 </div>
 </div>
 
-<div id="outline-container-org42a7768" class="outline-2">
-<h2 id="org42a7768"><span class="section-number-2">3</span> Evaluation</h2>
+<div id="outline-container-org423107d" class="outline-2">
+<h2 id="org423107d"><span class="section-number-2">3</span> Evaluation</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org479df23" class="outline-3">
-<h3 id="org479df23"><span class="section-number-3">3.1</span> Self/other score</h3>
+<div id="outline-container-org4e89c91" class="outline-3">
+<h3 id="org4e89c91"><span class="section-number-3">3.1</span> Self/other score</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 It is difficult to evaluate the results of these calculations.  As
-preliminary result, we did 18 calculations for different values of
-vocabulary size (20000 and 30000), upper and lower limits (70/35,
+preliminary result, we did 36 calculations for different values of
+vocabulary size (10000, 15000, 20000 and 30000), upper and lower limits (70/35,
 30/5, 3/1) and combined this with the above mentioned score for the
 weight of edges.  Based on the proximity, for every subcategory, we
 list the 10 closest subcategories.  As a first approximation (and
@@ -393,28 +441,87 @@ category.
 </p>
 
 <p>
-In addition, to get a better overview, we created <a href="sp-self-other-results.html">summary tables</a> for
-all 6 top categories.  These tables show how they perform in each
+In addition, to get a better overview, we created <a href="./sp-self-other-results.html">summary tables</a> for
+all 6 values 
+top categories.  These tables show how they perform in each
 calculation and allow for easier comparison.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgabfdf87" class="outline-3">
-<h3 id="orgabfdf87"><span class="section-number-3">3.2</span> Network analysis: Community detection</h3>
+<div id="outline-container-org26498ac" class="outline-3">
+<h3 id="org26498ac"><span class="section-number-3">3.2</span> Evaluation based on standard table</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
-There are many ways to detect communities, that is, sub-networks with a strong mutual relation.  Here we will use the louvain algorithm[1], which proved to be the best performing algorithm in [2]
+In order to get a better evaluation of the results, we created a list
+with subcategories that should go together and used this to check the
+results.  
+</p>
+
+<pre class="example">
+KR1a 易類	KR3g:術數類
+KR2a 正史類	KR2b:編年類,KR2d:別史類,KR2o:史評類
+KR2b 編年類	KR2a:正史類,
+KR1i 樂類	KR1d:禮類,
+KR1e 春秋類	KR2o:史評類
+KR2l 職官類	KR2m:政書類,KR2f:詔令奏議類,
+KR2m 政書類	KR2l:職官類,KR2f:詔令奏議類,
+KR2f 詔令奏議類	KR2l:職官類,KR2m:政書類,
+KR3g 術數類	KR3f:天文算法類,
+KR3f 天文算法類	KR3g:術數類,
+KR4a 楚辭類	KR1c:詩類
+KR4c 別集類-唐	KR4d:別集類-宋,
+KR4d 別集類-宋	KR4e:別集類-明,KR4c:別集類-唐
+KR4e 別集類-明	KR4d:別集類-宋,KR4f:別集類-清
+KR4f 別集類-清	KR4e:別集類-明
+KR6a 阿含部類	KR6b:本緣部類
+KR6l 毘曇部類	KR6n:瑜伽部類
+KR6m 中觀部類	KR6n:瑜伽部類
+KR6q 禪宗部類	KR6r:史傳部類,KR6p:淨土宗部類
+</pre>
+
+<p>
+The score is based on the position in the weighted list of
+neighbouring subcategories, the first position gets 10 points, from
+this one point is deducted as position gets lower, with 10th place
+awarded only one point. A list of these scores is also available in
+the summary <a href="./sp-self-other-results.html">summary tables</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bf8c90" class="outline-3">
+<h3 id="org9bf8c90"><span class="section-number-3">3.3</span> Network analysis: Community detection</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+There are many ways to detect communities, that is, sub-networks with
+a strong mutual relation.  Here we will use the louvain algorithm[1],
+which proved to be the best performing algorithm in [2].
+</p>
+
+<p>
+Communities detected using this algorithm are also linked in the
+<a href="./sp-self-other-results.html">summary tables</a>, the number given here is the number of communities for
+the network.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1ff25a" class="outline-3">
+<h3 id="orgc1ff25a"><span class="section-number-3">3.4</span> Evaluation for ngram</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Using the same method, but with ngrams instead of vocabulary lists
+from sentencepiece, we did calculations for ngram networks, the
+results are <a href="../nrep/sp-self-other-results.html">summarized here</a>.
 </p>
 </div>
 </div>
 </div>
 
 
-
-
-<div id="outline-container-org1230bea" class="outline-2">
-<h2 id="org1230bea"><span class="section-number-2">4</span> Bibliograpy</h2>
+<div id="outline-container-org0fd9fcd" class="outline-2">
+<h2 id="org0fd9fcd"><span class="section-number-2">4</span> Bibliograpy</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 [1] Blondel et.al (2008) <a href="https://pdfs.semanticscholar.org/b434/c0199bbf38163abd5f995e76aa1619d39db9.pdf">Fast unfolding of communities in large networks</a>
@@ -429,14 +536,14 @@ There are many ways to detect communities, that is, sub-networks with a strong m
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">In both cases, the values for 1 to 4 have been cut off to avoid distortion of the graph.</div></div>
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">In all cases, the values for 1 to 4 have been cut off to avoid distortion of the graph.</div></div>
 
 
 </div>
 </div></div>
 <div id="ox-postamble" class="status">
 <p class="author">Author: Christian Witterm</p>
-<p class="date">Created: 2019-06-10 Mon 18:01</p>
+<p class="date">Created: 2019-06-24 Mon 18:44</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

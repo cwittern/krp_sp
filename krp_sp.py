@@ -109,6 +109,12 @@ def makemodels(vsize='30000'):
             flag="m0"
         elif len(c) == 7:
             flag="m1"
+        elif vsize == '15000':
+            flag="m7"
+        elif vsize == '10000':
+            flag="m9"
+        elif vsize == '20000':
+            flag="m5"
         else:
             flag="m2"
         cml='--input=%s --model_prefix=model/%s-%s-%s --vocab_size=%s' % (corpus, flag, c.replace(".txt", ""), vsize, vsize)
