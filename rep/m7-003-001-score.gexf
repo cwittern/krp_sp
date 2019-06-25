@@ -1,0 +1,549 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static" name="m7-003-001-score">
+    <meta>
+      <creator>NetworkX 2.0</creator>
+      <lastmodified>24/06/2019</lastmodified>
+    </meta>
+    <nodes>
+      <node id="KR5b" label="洞玄部" />
+      <node id="KR6b" label="本緣部類" />
+      <node id="KR1g" label="五經總義類" />
+      <node id="KR3j" label="雜家類" />
+      <node id="KR4e" label="別集類-明" />
+      <node id="KR1a" label="易類" />
+      <node id="KR5f" label="太清部" />
+      <node id="KR2d" label="別史類" />
+      <node id="KR2c" label="紀事本末類" />
+      <node id="KR6h" label="大集部類" />
+      <node id="KR2j" label="時令類" />
+      <node id="KR3k" label="類書類" />
+      <node id="KR6k" label="律部類" />
+      <node id="KR4b" label="別集類-漢六朝" />
+      <node id="KR5c" label="洞神部" />
+      <node id="KR5g" label="正一部" />
+      <node id="KR6j" label="密教部類" />
+      <node id="KR3l" label="小說家類" />
+      <node id="KR3i" label="譜錄類" />
+      <node id="KR2a" label="正史類" />
+      <node id="KR6d" label="法華部類" />
+      <node id="KR5d" label="太玄部" />
+      <node id="KR5i" label="清代道教文獻" />
+      <node id="KR6i" label="經集部類" />
+      <node id="KR6u" label="敦煌寫本部類" />
+      <node id="KR4f" label="別集類-清" />
+      <node id="KR4h" label="總集類" />
+      <node id="KR1f" label="孝經類" />
+      <node id="KR2i" label="載記類" />
+      <node id="KR6v" label="新編部類" />
+      <node id="KR3g" label="術數類" />
+      <node id="KR2l" label="職官類" />
+      <node id="KR3b" label="兵家類" />
+      <node id="KR6p" label="淨土宗部類" />
+      <node id="KR3d" label="農家類" />
+      <node id="KR4j" label="詞曲類" />
+      <node id="KR1i" label="樂類" />
+      <node id="KR4i" label="詩文評類" />
+      <node id="KR1d" label="禮類" />
+      <node id="KR6f" label="寶積部類" />
+      <node id="KR2g" label="傳記類" />
+      <node id="KR3f" label="天文算法類" />
+      <node id="KR2f" label="詔令奏議類" />
+      <node id="KR6r" label="史傳部類" />
+      <node id="KR6c" label="般若部類" />
+      <node id="KR4c" label="別集類-唐" />
+      <node id="KR6l" label="毘曇部類" />
+      <node id="KR3c" label="法家類" />
+      <node id="KR6a" label="阿含部類" />
+      <node id="KR3e" label="醫家類" />
+      <node id="KR2b" label="編年類" />
+      <node id="KR1h" label="四書類" />
+      <node id="KR5e" label="太平部" />
+      <node id="KR5h" label="續道藏" />
+      <node id="KR2k" label="地理類" />
+      <node id="KR2m" label="政書類" />
+      <node id="KR3a" label="儒家類" />
+      <node id="KR1b" label="書類" />
+      <node id="KR1e" label="春秋類" />
+      <node id="KR4d" label="別集類-宋" />
+      <node id="KR2n" label="目錄類" />
+      <node id="KR6m" label="中觀部類" />
+      <node id="KR4a" label="楚辭類" />
+      <node id="KR6g" label="涅槃部類" />
+      <node id="KR2o" label="史評類" />
+      <node id="KR6o" label="論集部類" />
+      <node id="KR6e" label="華嚴部類" />
+      <node id="KR2e" label="雜史類" />
+      <node id="KR3h" label="藝術類" />
+      <node id="KR6n" label="瑜伽部類" />
+      <node id="KR5a" label="洞真部" />
+      <node id="KR6q" label="禪宗部類" />
+      <node id="KR1c" label="詩類" />
+      <node id="KR2h" label="史鈔類" />
+    </nodes>
+    <edges>
+      <edge id="0" source="KR5b" target="KR5g" weight="0.0213811668065" />
+      <edge id="1" source="KR5b" target="KR5c" weight="0.000281347296216" />
+      <edge id="2" source="KR5b" target="KR5e" weight="0.00123804419237" />
+      <edge id="3" source="KR5b" target="KR5h" weight="0.000365446414098" />
+      <edge id="4" source="KR5b" target="KR5a" weight="0.00456633093777" />
+      <edge id="5" source="KR5b" target="KR3g" weight="0.000336691334341" />
+      <edge id="6" source="KR5b" target="KR6v" weight="0.000283335446438" />
+      <edge id="7" source="KR5b" target="KR5i" weight="0.00148482460642" />
+      <edge id="8" source="KR5b" target="KR4d" weight="0.000136645906383" />
+      <edge id="9" source="KR5b" target="KR3e" weight="0.00019954324002" />
+      <edge id="10" source="KR5b" target="KR5d" weight="0.000347289210368" />
+      <edge id="11" source="KR6b" target="KR6l" weight="0.000644734038787" />
+      <edge id="12" source="KR6b" target="KR6u" weight="0.00355890942991" />
+      <edge id="13" source="KR6b" target="KR6g" weight="0.00104336747385" />
+      <edge id="14" source="KR6b" target="KR6r" weight="0.000663102126255" />
+      <edge id="15" source="KR6b" target="KR3l" weight="0.000453447606968" />
+      <edge id="16" source="KR6b" target="KR6d" weight="0.000579872498261" />
+      <edge id="17" source="KR6b" target="KR6a" weight="0.0113552369952" />
+      <edge id="18" source="KR6b" target="KR6k" weight="0.00255068314828" />
+      <edge id="19" source="KR6b" target="KR6h" weight="0.00266036209758" />
+      <edge id="20" source="KR6b" target="KR6v" weight="0.00214046568741" />
+      <edge id="21" source="KR6b" target="KR6f" weight="0.00216139435924" />
+      <edge id="22" source="KR1g" target="KR3j" weight="3.78313432794e-05" />
+      <edge id="23" source="KR1g" target="KR1a" weight="0.00172318546307" />
+      <edge id="24" source="KR1g" target="KR1f" weight="0.000963263269411" />
+      <edge id="25" source="KR1g" target="KR2o" weight="0.000374538942356" />
+      <edge id="26" source="KR1g" target="KR5c" weight="0.00102953334101" />
+      <edge id="27" source="KR1g" target="KR1h" weight="0.000506038406394" />
+      <edge id="28" source="KR1g" target="KR3h" weight="0.000424273929575" />
+      <edge id="29" source="KR1g" target="KR1d" weight="0.00268099634787" />
+      <edge id="30" source="KR1g" target="KR1c" weight="0.00588774168514" />
+      <edge id="31" source="KR1g" target="KR4a" weight="0.000899052750969" />
+      <edge id="32" source="KR1g" target="KR3a" weight="0.000440019791118" />
+      <edge id="33" source="KR1g" target="KR1b" weight="0.00257338355852" />
+      <edge id="34" source="KR1g" target="KR1e" weight="0.00126107414202" />
+      <edge id="35" source="KR3j" target="KR4b" weight="3.8381804623e-05" />
+      <edge id="36" source="KR3j" target="KR3d" weight="8.16082494619e-05" />
+      <edge id="37" source="KR3j" target="KR4i" weight="0.000105412125936" />
+      <edge id="38" source="KR3j" target="KR5f" weight="2.65290628266e-05" />
+      <edge id="39" source="KR3j" target="KR3i" weight="8.99255252442e-05" />
+      <edge id="40" source="KR3j" target="KR1c" weight="3.39509753733e-05" />
+      <edge id="41" source="KR3j" target="KR4a" weight="6.66357949255e-05" />
+      <edge id="42" source="KR3j" target="KR3c" weight="3.12515946327e-05" />
+      <edge id="43" source="KR3j" target="KR3e" weight="4.38321208028e-05" />
+      <edge id="44" source="KR4e" target="KR4d" weight="0.00122413128865" />
+      <edge id="45" source="KR4e" target="KR2n" weight="0.000289542728482" />
+      <edge id="46" source="KR4e" target="KR4f" weight="0.00061640792078" />
+      <edge id="47" source="KR4e" target="KR2f" weight="0.000283913243719" />
+      <edge id="48" source="KR4e" target="KR2k" weight="0.000302849191886" />
+      <edge id="49" source="KR4e" target="KR5f" weight="0.000250508077001" />
+      <edge id="50" source="KR4e" target="KR3h" weight="0.000283986410418" />
+      <edge id="51" source="KR4e" target="KR4h" weight="0.000243296694454" />
+      <edge id="52" source="KR4e" target="KR2g" weight="0.00162306781227" />
+      <edge id="53" source="KR4e" target="KR1e" weight="0.000389130323292" />
+      <edge id="54" source="KR1a" target="KR2n" weight="0.00174213714323" />
+      <edge id="55" source="KR1a" target="KR5i" weight="0.00106353670539" />
+      <edge id="56" source="KR1a" target="KR5a" weight="0.000497278619718" />
+      <edge id="57" source="KR1a" target="KR1f" weight="0.00163056780981" />
+      <edge id="58" source="KR1a" target="KR3g" weight="0.00426350954603" />
+      <edge id="59" source="KR1a" target="KR5f" weight="0.00135913802759" />
+      <edge id="60" source="KR1a" target="KR3c" weight="0.000207945775118" />
+      <edge id="61" source="KR1a" target="KR2j" weight="0.000645793377878" />
+      <edge id="62" source="KR1a" target="KR5c" weight="0.0010115465703" />
+      <edge id="63" source="KR1a" target="KR1h" weight="0.00229494185486" />
+      <edge id="64" source="KR1a" target="KR5h" weight="0.00282545937754" />
+      <edge id="65" source="KR1a" target="KR2e" weight="0.000757454766103" />
+      <edge id="66" source="KR1a" target="KR3a" weight="0.0018447562922" />
+      <edge id="67" source="KR1a" target="KR5d" weight="0.000766970107241" />
+      <edge id="68" source="KR1a" target="KR1c" weight="0.000748764297669" />
+      <edge id="69" source="KR1a" target="KR1b" weight="0.0014166771304" />
+      <edge id="70" source="KR1a" target="KR3f" weight="0.0014617941582" />
+      <edge id="71" source="KR5f" target="KR4a" weight="0.000193419294498" />
+      <edge id="72" source="KR5f" target="KR3g" weight="0.00150238661859" />
+      <edge id="73" source="KR5f" target="KR2d" weight="0.000268861791459" />
+      <edge id="74" source="KR5f" target="KR1f" weight="0.000951576251527" />
+      <edge id="75" source="KR5f" target="KR3c" weight="0.00561365318646" />
+      <edge id="76" source="KR5f" target="KR3b" weight="0.00343437501774" />
+      <edge id="77" source="KR5f" target="KR4b" weight="0.000943826850204" />
+      <edge id="78" source="KR5f" target="KR5c" weight="0.00169405550075" />
+      <edge id="79" source="KR5f" target="KR1h" weight="0.00049914593644" />
+      <edge id="80" source="KR5f" target="KR3a" weight="0.00175831170032" />
+      <edge id="81" source="KR5f" target="KR1e" weight="0.000617541528226" />
+      <edge id="82" source="KR5f" target="KR3f" weight="0.000723090019293" />
+      <edge id="83" source="KR2d" target="KR2a" weight="0.0023261213073" />
+      <edge id="84" source="KR2d" target="KR2n" weight="0.000550545965838" />
+      <edge id="85" source="KR2d" target="KR2e" weight="0.00132498166652" />
+      <edge id="86" source="KR2d" target="KR2i" weight="0.00063448408637" />
+      <edge id="87" source="KR2d" target="KR3l" weight="0.0002184768438" />
+      <edge id="88" source="KR2d" target="KR3k" weight="0.000115318219095" />
+      <edge id="89" source="KR2d" target="KR2o" weight="0.00040007645151" />
+      <edge id="90" source="KR2d" target="KR2l" weight="0.000264889543532" />
+      <edge id="91" source="KR2d" target="KR2h" weight="0.000220531713932" />
+      <edge id="92" source="KR2d" target="KR1e" weight="0.00326218603655" />
+      <edge id="93" source="KR2c" target="KR2f" weight="0.0110520731351" />
+      <edge id="94" source="KR2c" target="KR2b" weight="0.000789378655384" />
+      <edge id="95" source="KR2c" target="KR2e" weight="0.000499389483371" />
+      <edge id="96" source="KR2c" target="KR2m" weight="0.00190167555398" />
+      <edge id="97" source="KR2c" target="KR2i" weight="0.000351685803293" />
+      <edge id="98" source="KR2c" target="KR1d" weight="0.000548343639363" />
+      <edge id="99" source="KR2c" target="KR4f" weight="0.000629489535147" />
+      <edge id="100" source="KR2c" target="KR3b" weight="0.00139744065099" />
+      <edge id="101" source="KR2c" target="KR2g" weight="0.00333847338754" />
+      <edge id="102" source="KR2c" target="KR1e" weight="0.00129369835388" />
+      <edge id="103" source="KR6h" target="KR6p" weight="0.00061797125221" />
+      <edge id="104" source="KR6h" target="KR6i" weight="0.00102980049948" />
+      <edge id="105" source="KR6h" target="KR6u" weight="0.00326711211984" />
+      <edge id="106" source="KR6h" target="KR6c" weight="0.00237212131455" />
+      <edge id="107" source="KR6h" target="KR6g" weight="0.00161321732274" />
+      <edge id="108" source="KR6h" target="KR6a" weight="0.00259288747846" />
+      <edge id="109" source="KR6h" target="KR6l" weight="0.000775209314089" />
+      <edge id="110" source="KR6h" target="KR6e" weight="0.00330934721826" />
+      <edge id="111" source="KR6h" target="KR6j" weight="0.00131496436255" />
+      <edge id="112" source="KR6h" target="KR6f" weight="0.00434566979965" />
+      <edge id="113" source="KR2j" target="KR3g" weight="0.000825739668179" />
+      <edge id="114" source="KR2j" target="KR3l" weight="0.000532164950048" />
+      <edge id="115" source="KR2j" target="KR3k" weight="0.000229304220061" />
+      <edge id="116" source="KR2j" target="KR3e" weight="0.000544414635532" />
+      <edge id="117" source="KR2j" target="KR4b" weight="0.000210792287512" />
+      <edge id="118" source="KR2j" target="KR2l" weight="0.000490921511656" />
+      <edge id="119" source="KR2j" target="KR3d" weight="0.00177589151166" />
+      <edge id="120" source="KR2j" target="KR4j" weight="0.000835980406492" />
+      <edge id="121" source="KR2j" target="KR1d" weight="0.00084125146486" />
+      <edge id="122" source="KR2j" target="KR3i" weight="0.00340416998132" />
+      <edge id="123" source="KR2j" target="KR3f" weight="0.000904209156014" />
+      <edge id="124" source="KR3k" target="KR4b" weight="0.000431692020706" />
+      <edge id="125" source="KR3k" target="KR2n" weight="0.00146202157388" />
+      <edge id="126" source="KR3k" target="KR4c" weight="0.000112448708491" />
+      <edge id="127" source="KR3k" target="KR2k" weight="0.00010036380846" />
+      <edge id="128" source="KR3k" target="KR4i" weight="0.00014508887205" />
+      <edge id="129" source="KR3k" target="KR2l" weight="0.000117255308816" />
+      <edge id="130" source="KR3k" target="KR2a" weight="0.00012651250624" />
+      <edge id="131" source="KR3k" target="KR1i" weight="6.86688875171e-05" />
+      <edge id="132" source="KR6k" target="KR6m" weight="0.0011426364451" />
+      <edge id="133" source="KR6k" target="KR6u" weight="0.00181195127183" />
+      <edge id="134" source="KR6k" target="KR6g" weight="0.00183527263598" />
+      <edge id="135" source="KR6k" target="KR6l" weight="0.0010771883562" />
+      <edge id="136" source="KR6k" target="KR6i" weight="0.00111582274635" />
+      <edge id="137" source="KR6k" target="KR6j" weight="0.00117595784972" />
+      <edge id="138" source="KR6k" target="KR6e" weight="0.00111151019792" />
+      <edge id="139" source="KR6k" target="KR6r" weight="0.00123111398264" />
+      <edge id="140" source="KR6k" target="KR3e" weight="0.000542888607794" />
+      <edge id="141" source="KR6k" target="KR6q" weight="0.00051092538607" />
+      <edge id="142" source="KR6k" target="KR6a" weight="0.00443225180177" />
+      <edge id="143" source="KR6k" target="KR6n" weight="0.0012229672875" />
+      <edge id="144" source="KR4b" target="KR4h" weight="0.00047572269467" />
+      <edge id="145" source="KR4b" target="KR4i" weight="0.000212974083721" />
+      <edge id="146" source="KR4b" target="KR2h" weight="0.00037226128523" />
+      <edge id="147" source="KR4b" target="KR1c" weight="0.000229696851409" />
+      <edge id="148" source="KR4b" target="KR2o" weight="0.000232566362894" />
+      <edge id="149" source="KR4b" target="KR4c" weight="0.000485625756436" />
+      <edge id="150" source="KR4b" target="KR1b" weight="0.000435263929817" />
+      <edge id="151" source="KR5c" target="KR1f" weight="0.000554388056" />
+      <edge id="152" source="KR5c" target="KR3e" weight="0.00250404583495" />
+      <edge id="153" source="KR5c" target="KR1h" weight="0.000710745946622" />
+      <edge id="154" source="KR5c" target="KR5e" weight="0.00105131737442" />
+      <edge id="155" source="KR5c" target="KR5h" weight="0.00146064078899" />
+      <edge id="156" source="KR5c" target="KR5a" weight="0.000324793490735" />
+      <edge id="157" source="KR5c" target="KR3a" weight="0.000522797674858" />
+      <edge id="158" source="KR5c" target="KR5i" weight="0.00192047924684" />
+      <edge id="159" source="KR5c" target="KR5d" weight="0.00100920259158" />
+      <edge id="160" source="KR5g" target="KR3f" weight="0.000510075276863" />
+      <edge id="161" source="KR5g" target="KR3b" weight="0.000315081181877" />
+      <edge id="162" source="KR5g" target="KR5e" weight="0.0063592990568" />
+      <edge id="163" source="KR5g" target="KR5h" weight="0.000639957259769" />
+      <edge id="164" source="KR5g" target="KR5a" weight="0.00467130955002" />
+      <edge id="165" source="KR5g" target="KR3g" weight="0.00165606240505" />
+      <edge id="166" source="KR5g" target="KR5i" weight="0.0013334609188" />
+      <edge id="167" source="KR5g" target="KR3e" weight="0.000437508380382" />
+      <edge id="168" source="KR5g" target="KR5d" weight="0.00146370985101" />
+      <edge id="169" source="KR6j" target="KR6p" weight="0.00151653113578" />
+      <edge id="170" source="KR6j" target="KR6i" weight="0.000784812259131" />
+      <edge id="171" source="KR6j" target="KR6u" weight="0.00165141548223" />
+      <edge id="172" source="KR6j" target="KR6o" weight="0.00104174106843" />
+      <edge id="173" source="KR6j" target="KR6r" weight="0.000399579859385" />
+      <edge id="174" source="KR6j" target="KR6v" weight="0.00354525944203" />
+      <edge id="175" source="KR6j" target="KR6d" weight="0.000937656416423" />
+      <edge id="176" source="KR6j" target="KR6c" weight="0.000959365087059" />
+      <edge id="177" source="KR6j" target="KR6n" weight="0.000959706170692" />
+      <edge id="178" source="KR3l" target="KR6r" weight="0.00134623366896" />
+      <edge id="179" source="KR3l" target="KR4h" weight="0.0001279758285" />
+      <edge id="180" source="KR3l" target="KR3c" weight="0.000272685457658" />
+      <edge id="181" source="KR3l" target="KR3e" weight="0.000441866132336" />
+      <edge id="182" source="KR3l" target="KR2h" weight="0.00112905492959" />
+      <edge id="183" source="KR3l" target="KR3h" weight="0.0010400904473" />
+      <edge id="184" source="KR3l" target="KR4i" weight="0.00114748840449" />
+      <edge id="185" source="KR3l" target="KR5a" weight="0.000182722815619" />
+      <edge id="186" source="KR3l" target="KR3i" weight="0.000312365728415" />
+      <edge id="187" source="KR3l" target="KR2g" weight="0.000319298568464" />
+      <edge id="188" source="KR3l" target="KR5d" weight="0.000663329008635" />
+      <edge id="189" source="KR3i" target="KR4f" weight="0.000268253461266" />
+      <edge id="190" source="KR3i" target="KR4h" weight="8.70929755163e-05" />
+      <edge id="191" source="KR3i" target="KR3e" weight="0.00709806367797" />
+      <edge id="192" source="KR3i" target="KR3d" weight="0.00462998655223" />
+      <edge id="193" source="KR3i" target="KR4j" weight="0.00861179863443" />
+      <edge id="194" source="KR3i" target="KR3h" weight="0.00168523756187" />
+      <edge id="195" source="KR3i" target="KR4i" weight="0.000946139488146" />
+      <edge id="196" source="KR3i" target="KR1c" weight="0.000436139186377" />
+      <edge id="197" source="KR3i" target="KR4a" weight="0.000512658801579" />
+      <edge id="198" source="KR2a" target="KR2o" weight="0.000593382800818" />
+      <edge id="199" source="KR2a" target="KR2m" weight="0.000648256031528" />
+      <edge id="200" source="KR2a" target="KR2i" weight="0.00109057820775" />
+      <edge id="201" source="KR2a" target="KR3g" weight="0.000454300690473" />
+      <edge id="202" source="KR2a" target="KR2l" weight="0.00141616529333" />
+      <edge id="203" source="KR2a" target="KR2b" weight="0.00111259668781" />
+      <edge id="204" source="KR2a" target="KR2h" weight="0.00124165560559" />
+      <edge id="205" source="KR2a" target="KR4a" weight="0.000136652554817" />
+      <edge id="206" source="KR2a" target="KR2g" weight="0.000348098147336" />
+      <edge id="207" source="KR2a" target="KR3f" weight="0.00290462024671" />
+      <edge id="208" source="KR6d" target="KR6p" weight="0.0015534099398" />
+      <edge id="209" source="KR6d" target="KR6i" weight="0.00155106204554" />
+      <edge id="210" source="KR6d" target="KR6u" weight="0.00122982998483" />
+      <edge id="211" source="KR6d" target="KR6g" weight="0.00486363758661" />
+      <edge id="212" source="KR6d" target="KR6r" weight="0.000462208696278" />
+      <edge id="213" source="KR6d" target="KR6m" weight="0.00190265272091" />
+      <edge id="214" source="KR6d" target="KR6c" weight="0.000813801127026" />
+      <edge id="215" source="KR6d" target="KR6e" weight="0.00199347573975" />
+      <edge id="216" source="KR6d" target="KR6n" weight="0.00102990744769" />
+      <edge id="217" source="KR6d" target="KR6o" weight="0.000652489115425" />
+      <edge id="218" source="KR5d" target="KR5i" weight="0.00123026505497" />
+      <edge id="219" source="KR5d" target="KR5e" weight="0.00102675248466" />
+      <edge id="220" source="KR5d" target="KR3e" weight="0.00827711753998" />
+      <edge id="221" source="KR5d" target="KR5a" weight="0.00175264831875" />
+      <edge id="222" source="KR5d" target="KR3g" weight="0.00420721854955" />
+      <edge id="223" source="KR5d" target="KR1i" weight="0.00141586544152" />
+      <edge id="224" source="KR5i" target="KR5e" weight="0.000513480955347" />
+      <edge id="225" source="KR5i" target="KR5h" weight="0.00087643095765" />
+      <edge id="226" source="KR5i" target="KR5a" weight="0.00205646225236" />
+      <edge id="227" source="KR5i" target="KR6q" weight="0.000500793355254" />
+      <edge id="228" source="KR5i" target="KR6u" weight="0.000494361674073" />
+      <edge id="229" source="KR6i" target="KR6p" weight="0.000579427732781" />
+      <edge id="230" source="KR6i" target="KR6e" weight="0.00185301815006" />
+      <edge id="231" source="KR6i" target="KR6u" weight="0.00217639503171" />
+      <edge id="232" source="KR6i" target="KR6v" weight="0.00136144258213" />
+      <edge id="233" source="KR6i" target="KR6f" weight="0.00117555273475" />
+      <edge id="234" source="KR6i" target="KR6m" weight="0.000830158311826" />
+      <edge id="235" source="KR6i" target="KR6n" weight="0.000928773278872" />
+      <edge id="236" source="KR6u" target="KR6p" weight="0.00103614908895" />
+      <edge id="237" source="KR6u" target="KR6g" weight="0.00187755811628" />
+      <edge id="238" source="KR6u" target="KR3c" weight="0.000300091329178" />
+      <edge id="239" source="KR6u" target="KR6v" weight="0.00120348067462" />
+      <edge id="240" source="KR6u" target="KR6m" weight="0.00172389695471" />
+      <edge id="241" source="KR6u" target="KR6c" weight="0.0010865719476" />
+      <edge id="242" source="KR6u" target="KR6e" weight="0.00210392529879" />
+      <edge id="243" source="KR6u" target="KR6r" weight="0.000369844328512" />
+      <edge id="244" source="KR6u" target="KR3e" weight="0.000591091211341" />
+      <edge id="245" source="KR6u" target="KR6o" weight="0.000686069684027" />
+      <edge id="246" source="KR6u" target="KR6q" weight="0.000529532813879" />
+      <edge id="247" source="KR6u" target="KR6a" weight="0.00181584227096" />
+      <edge id="248" source="KR6u" target="KR6f" weight="0.00163456685928" />
+      <edge id="249" source="KR6u" target="KR3f" weight="0.00100987715423" />
+      <edge id="250" source="KR4f" target="KR2f" weight="0.000567276636279" />
+      <edge id="251" source="KR4f" target="KR4j" weight="0.000480974060203" />
+      <edge id="252" source="KR4f" target="KR3h" weight="0.000331316598425" />
+      <edge id="253" source="KR4f" target="KR4i" weight="0.000352473265019" />
+      <edge id="254" source="KR4f" target="KR1b" weight="0.000158013965004" />
+      <edge id="255" source="KR4f" target="KR4h" weight="0.000137054942301" />
+      <edge id="256" source="KR4f" target="KR2k" weight="0.000247351689794" />
+      <edge id="257" source="KR4f" target="KR3f" weight="0.000147560569801" />
+      <edge id="258" source="KR4h" target="KR2n" weight="0.000231100447529" />
+      <edge id="259" source="KR4h" target="KR4j" weight="0.00113325765102" />
+      <edge id="260" source="KR4h" target="KR3h" weight="0.000179957782288" />
+      <edge id="261" source="KR4h" target="KR4c" weight="0.000805480444903" />
+      <edge id="262" source="KR4h" target="KR6q" weight="7.11886717153e-05" />
+      <edge id="263" source="KR1f" target="KR2n" weight="0.000917613646637" />
+      <edge id="264" source="KR1f" target="KR3c" weight="0.000864084644869" />
+      <edge id="265" source="KR1f" target="KR5h" weight="0.000211324805032" />
+      <edge id="266" source="KR1f" target="KR3d" weight="0.000335384750947" />
+      <edge id="267" source="KR1f" target="KR1h" weight="0.00407545037596" />
+      <edge id="268" source="KR1f" target="KR1i" weight="0.000854650432636" />
+      <edge id="269" source="KR1f" target="KR1d" weight="0.00750720443824" />
+      <edge id="270" source="KR1f" target="KR3a" weight="0.00116835469596" />
+      <edge id="271" source="KR1f" target="KR1c" weight="0.00104354622684" />
+      <edge id="272" source="KR1f" target="KR1b" weight="0.00196500903321" />
+      <edge id="273" source="KR1f" target="KR1e" weight="0.00154156641799" />
+      <edge id="274" source="KR2i" target="KR2n" weight="0.000356805325583" />
+      <edge id="275" source="KR2i" target="KR2b" weight="0.000709786945797" />
+      <edge id="276" source="KR2i" target="KR2h" weight="0.00401559316423" />
+      <edge id="277" source="KR2i" target="KR2k" weight="0.000525729014033" />
+      <edge id="278" source="KR2i" target="KR2o" weight="0.00127168789767" />
+      <edge id="279" source="KR2i" target="KR3b" weight="0.000343367186629" />
+      <edge id="280" source="KR2i" target="KR1e" weight="0.000901687037712" />
+      <edge id="281" source="KR6v" target="KR6p" weight="0.00128439392129" />
+      <edge id="282" source="KR6v" target="KR2f" weight="0.000876255250825" />
+      <edge id="283" source="KR6v" target="KR6c" weight="0.00337028038654" />
+      <edge id="284" source="KR6v" target="KR4j" weight="0.000679075137773" />
+      <edge id="285" source="KR6v" target="KR6l" weight="0.000962059279207" />
+      <edge id="286" source="KR6v" target="KR6r" weight="0.00108315576974" />
+      <edge id="287" source="KR6v" target="KR3h" weight="0.000391238807566" />
+      <edge id="288" source="KR6v" target="KR6q" weight="0.00138543663265" />
+      <edge id="289" source="KR6v" target="KR6n" weight="0.00130152912895" />
+      <edge id="290" source="KR6v" target="KR6o" weight="0.00070567486734" />
+      <edge id="291" source="KR3g" target="KR3b" weight="0.0023362884014" />
+      <edge id="292" source="KR3g" target="KR3c" weight="0.000327586651088" />
+      <edge id="293" source="KR3g" target="KR3e" weight="0.000984096197665" />
+      <edge id="294" source="KR3g" target="KR3d" weight="0.000211833475251" />
+      <edge id="295" source="KR3g" target="KR2h" weight="0.000622538557299" />
+      <edge id="296" source="KR3g" target="KR5h" weight="0.00351079603437" />
+      <edge id="297" source="KR3g" target="KR1i" weight="0.000879535412751" />
+      <edge id="298" source="KR3g" target="KR3f" weight="0.00835435351406" />
+      <edge id="299" source="KR2l" target="KR2f" weight="0.0038403078108" />
+      <edge id="300" source="KR2l" target="KR4d" weight="0.00017493568988" />
+      <edge id="301" source="KR2l" target="KR2m" weight="0.0119642526294" />
+      <edge id="302" source="KR2l" target="KR2n" weight="0.000805185792668" />
+      <edge id="303" source="KR2l" target="KR2b" weight="0.00102531114389" />
+      <edge id="304" source="KR2l" target="KR2e" weight="0.00434518642648" />
+      <edge id="305" source="KR2l" target="KR2k" weight="0.000813909130929" />
+      <edge id="306" source="KR2l" target="KR1d" weight="0.00145928596796" />
+      <edge id="307" source="KR2l" target="KR2g" weight="0.00135681402253" />
+      <edge id="308" source="KR2l" target="KR3f" weight="0.00078888109521" />
+      <edge id="309" source="KR3b" target="KR2f" weight="0.000964819267483" />
+      <edge id="310" source="KR3b" target="KR2o" weight="0.000391181708197" />
+      <edge id="311" source="KR3b" target="KR2m" weight="0.000449591121262" />
+      <edge id="312" source="KR3b" target="KR3c" weight="0.000241217936044" />
+      <edge id="313" source="KR3b" target="KR2b" weight="0.000402226313935" />
+      <edge id="314" source="KR3b" target="KR2h" weight="0.000664209447691" />
+      <edge id="315" source="KR3b" target="KR2k" weight="0.00279512486423" />
+      <edge id="316" source="KR3b" target="KR6q" weight="0.000685029017487" />
+      <edge id="317" source="KR3b" target="KR3f" weight="0.00072691942344" />
+      <edge id="318" source="KR3b" target="KR1e" weight="0.000462720439055" />
+      <edge id="319" source="KR6p" target="KR4d" weight="0.000170356495166" />
+      <edge id="320" source="KR6p" target="KR6e" weight="0.000868144225489" />
+      <edge id="321" source="KR6p" target="KR6r" weight="0.00197602077143" />
+      <edge id="322" source="KR6p" target="KR6q" weight="0.00245133924214" />
+      <edge id="323" source="KR6p" target="KR6f" weight="0.00708495181044" />
+      <edge id="324" source="KR3d" target="KR2f" weight="0.000501214204963" />
+      <edge id="325" source="KR3d" target="KR2m" weight="0.000214853439057" />
+      <edge id="326" source="KR3d" target="KR4j" weight="0.000224212105086" />
+      <edge id="327" source="KR3d" target="KR1c" weight="0.000345719483412" />
+      <edge id="328" source="KR3d" target="KR3e" weight="0.0007571239298" />
+      <edge id="329" source="KR3d" target="KR3f" weight="0.000346951289843" />
+      <edge id="330" source="KR4j" target="KR4d" weight="0.000414478399259" />
+      <edge id="331" source="KR4j" target="KR4c" weight="0.000587455752358" />
+      <edge id="332" source="KR4j" target="KR5e" weight="0.00118837016914" />
+      <edge id="333" source="KR4j" target="KR4i" weight="0.00364361203875" />
+      <edge id="334" source="KR4j" target="KR6q" weight="0.00316914726063" />
+      <edge id="335" source="KR4j" target="KR3h" weight="0.00158689385931" />
+      <edge id="336" source="KR4j" target="KR3a" weight="0.000500120333515" />
+      <edge id="337" source="KR4j" target="KR1i" weight="0.00193151107178" />
+      <edge id="338" source="KR4j" target="KR3f" weight="0.000813749971769" />
+      <edge id="339" source="KR1i" target="KR2m" weight="0.0052810917265" />
+      <edge id="340" source="KR1i" target="KR3h" weight="0.000926932291776" />
+      <edge id="341" source="KR1i" target="KR4i" weight="0.000560654652179" />
+      <edge id="342" source="KR1i" target="KR1d" weight="0.00479961152577" />
+      <edge id="343" source="KR1i" target="KR1c" weight="0.00155802274025" />
+      <edge id="344" source="KR1i" target="KR3f" weight="0.0146431695804" />
+      <edge id="345" source="KR1i" target="KR1b" weight="0.00149978501639" />
+      <edge id="346" source="KR4i" target="KR4d" weight="0.000237237403063" />
+      <edge id="347" source="KR4i" target="KR2n" weight="0.000737072199311" />
+      <edge id="348" source="KR4i" target="KR2e" weight="0.000639990314492" />
+      <edge id="349" source="KR4i" target="KR4c" weight="0.00101169288954" />
+      <edge id="350" source="KR4i" target="KR3h" weight="0.00107210903576" />
+      <edge id="351" source="KR4i" target="KR1c" weight="0.0003659300103" />
+      <edge id="352" source="KR1d" target="KR2n" weight="0.000657655962617" />
+      <edge id="353" source="KR1d" target="KR4a" weight="0.000119779702451" />
+      <edge id="354" source="KR1d" target="KR2m" weight="0.00380716488441" />
+      <edge id="355" source="KR1d" target="KR1h" weight="0.0010322425065" />
+      <edge id="356" source="KR1d" target="KR1b" weight="0.00141499932803" />
+      <edge id="357" source="KR1d" target="KR1c" weight="0.00353327794546" />
+      <edge id="358" source="KR1d" target="KR3f" weight="0.00120789990753" />
+      <edge id="359" source="KR1d" target="KR3a" weight="0.000467531294124" />
+      <edge id="360" source="KR1d" target="KR1e" weight="0.00360999318956" />
+      <edge id="361" source="KR6f" target="KR6c" weight="0.00274180792185" />
+      <edge id="362" source="KR6f" target="KR6o" weight="0.00067909083503" />
+      <edge id="363" source="KR6f" target="KR6l" weight="0.000808281246719" />
+      <edge id="364" source="KR6f" target="KR6m" weight="0.00112224036306" />
+      <edge id="365" source="KR6f" target="KR6e" weight="0.00214643498262" />
+      <edge id="366" source="KR6f" target="KR6a" weight="0.00165265095602" />
+      <edge id="367" source="KR6f" target="KR6g" weight="0.00126611419301" />
+      <edge id="368" source="KR2g" target="KR2f" weight="0.000516129713033" />
+      <edge id="369" source="KR2g" target="KR2m" weight="0.00306365685779" />
+      <edge id="370" source="KR2g" target="KR4d" weight="0.000303437008185" />
+      <edge id="371" source="KR2g" target="KR2b" weight="0.000720947898585" />
+      <edge id="372" source="KR2g" target="KR2e" weight="0.00126755413926" />
+      <edge id="373" source="KR2g" target="KR2k" weight="0.000631274334089" />
+      <edge id="374" source="KR2g" target="KR3a" weight="0.000956926721132" />
+      <edge id="375" source="KR2g" target="KR1h" weight="0.000448549736577" />
+      <edge id="376" source="KR3f" target="KR2f" weight="0.00107156904376" />
+      <edge id="377" source="KR3f" target="KR2m" weight="0.0016637805906" />
+      <edge id="378" source="KR3f" target="KR3e" weight="0.000739128793005" />
+      <edge id="379" source="KR3f" target="KR3h" weight="0.00092065103246" />
+      <edge id="380" source="KR3f" target="KR5e" weight="0.000407421613331" />
+      <edge id="381" source="KR3f" target="KR1b" weight="0.00154839745232" />
+      <edge id="382" source="KR2f" target="KR4d" weight="0.000292612528226" />
+      <edge id="383" source="KR2f" target="KR2o" weight="0.000562188930216" />
+      <edge id="384" source="KR2f" target="KR2b" weight="0.00286829686953" />
+      <edge id="385" source="KR2f" target="KR2h" weight="0.00136766336018" />
+      <edge id="386" source="KR2f" target="KR1b" weight="0.000778750390425" />
+      <edge id="387" source="KR2f" target="KR2k" weight="0.000925227586732" />
+      <edge id="388" source="KR2f" target="KR2m" weight="0.00703803326018" />
+      <edge id="389" source="KR6r" target="KR6m" weight="0.000349779482482" />
+      <edge id="390" source="KR6r" target="KR6q" weight="0.0233783114798" />
+      <edge id="391" source="KR6c" target="KR6o" weight="0.000754239562681" />
+      <edge id="392" source="KR6c" target="KR6m" weight="0.00299795015292" />
+      <edge id="393" source="KR6c" target="KR6g" weight="0.00105907911952" />
+      <edge id="394" source="KR6c" target="KR6l" weight="0.00294071466483" />
+      <edge id="395" source="KR6c" target="KR6e" weight="0.00146337679089" />
+      <edge id="396" source="KR6c" target="KR6a" weight="0.000855793424868" />
+      <edge id="397" source="KR6c" target="KR6n" weight="0.00157030484161" />
+      <edge id="398" source="KR4c" target="KR2n" weight="0.000346939194848" />
+      <edge id="399" source="KR4c" target="KR2h" weight="0.000642285288062" />
+      <edge id="400" source="KR4c" target="KR1c" weight="0.000617765437504" />
+      <edge id="401" source="KR4c" target="KR4a" weight="0.000627939122485" />
+      <edge id="402" source="KR4c" target="KR4d" weight="0.000252342507049" />
+      <edge id="403" source="KR4c" target="KR2k" weight="0.000298886866023" />
+      <edge id="404" source="KR6l" target="KR6m" weight="0.00216426270646" />
+      <edge id="405" source="KR6l" target="KR6e" weight="0.000905604931796" />
+      <edge id="406" source="KR6l" target="KR6o" weight="0.00128846713261" />
+      <edge id="407" source="KR6l" target="KR6a" weight="0.0047336173239" />
+      <edge id="408" source="KR6l" target="KR6n" weight="0.0396876263868" />
+      <edge id="409" source="KR6l" target="KR6g" weight="0.000958900333471" />
+      <edge id="410" source="KR3c" target="KR2e" weight="0.000403293226752" />
+      <edge id="411" source="KR3c" target="KR1b" weight="0.000224521029902" />
+      <edge id="412" source="KR3c" target="KR1e" weight="0.000323576814318" />
+      <edge id="413" source="KR6a" target="KR6m" weight="0.000783100661596" />
+      <edge id="414" source="KR6a" target="KR6g" weight="0.0012785022149" />
+      <edge id="415" source="KR6a" target="KR5h" weight="0.000217390031599" />
+      <edge id="416" source="KR6a" target="KR6o" weight="0.000852296655975" />
+      <edge id="417" source="KR3e" target="KR5e" weight="0.0578817769591" />
+      <edge id="418" source="KR3e" target="KR4a" weight="0.000425998726483" />
+      <edge id="419" source="KR2b" target="KR2e" weight="0.00168500771345" />
+      <edge id="420" source="KR2b" target="KR2h" weight="0.000491738811956" />
+      <edge id="421" source="KR2b" target="KR2o" weight="0.00324276771386" />
+      <edge id="422" source="KR1h" target="KR3a" weight="0.0126460510522" />
+      <edge id="423" source="KR1h" target="KR1c" weight="0.00116129138671" />
+      <edge id="424" source="KR1h" target="KR1b" weight="0.00148552914787" />
+      <edge id="425" source="KR1h" target="KR1e" weight="0.00116696394115" />
+      <edge id="426" source="KR5e" target="KR5a" weight="0.000613173485676" />
+      <edge id="427" source="KR5e" target="KR6q" weight="0.000713924932505" />
+      <edge id="428" source="KR5h" target="KR5a" weight="0.000522103667858" />
+      <edge id="429" source="KR5h" target="KR4a" weight="0.000150245157319" />
+      <edge id="430" source="KR5h" target="KR1c" weight="0.000478255576426" />
+      <edge id="431" source="KR2k" target="KR2n" weight="0.00157896611857" />
+      <edge id="432" source="KR2k" target="KR2o" weight="0.00040698659668" />
+      <edge id="433" source="KR2k" target="KR2e" weight="0.00094369671414" />
+      <edge id="434" source="KR2k" target="KR2m" weight="0.00154816477082" />
+      <edge id="435" source="KR2k" target="KR1b" weight="0.00297380062473" />
+      <edge id="436" source="KR3a" target="KR6q" weight="0.000588449876516" />
+      <edge id="437" source="KR3a" target="KR1b" weight="0.000571876202521" />
+      <edge id="438" source="KR1b" target="KR2n" weight="0.000645528438255" />
+      <edge id="439" source="KR1b" target="KR1c" weight="0.0029759700402" />
+      <edge id="440" source="KR1b" target="KR1e" weight="0.00127008168554" />
+      <edge id="441" source="KR1e" target="KR2n" weight="0.000837940279016" />
+      <edge id="442" source="KR1e" target="KR2e" weight="0.00064153138335" />
+      <edge id="443" source="KR1e" target="KR1c" weight="0.00160984563764" />
+      <edge id="444" source="KR1e" target="KR2o" weight="0.00614266450684" />
+      <edge id="445" source="KR4d" target="KR1c" weight="0.00012879894932" />
+      <edge id="446" source="KR2n" target="KR3h" weight="0.0161055718694" />
+      <edge id="447" source="KR6m" target="KR6o" weight="0.00376756269119" />
+      <edge id="448" source="KR6m" target="KR6g" weight="0.00551898792781" />
+      <edge id="449" source="KR6m" target="KR6e" weight="0.00215837453245" />
+      <edge id="450" source="KR6m" target="KR6n" weight="0.00377869778927" />
+      <edge id="451" source="KR4a" target="KR1c" weight="0.00104604371649" />
+      <edge id="452" source="KR4a" target="KR2e" weight="0.00894466482908" />
+      <edge id="453" source="KR6g" target="KR6e" weight="0.00140245876152" />
+      <edge id="454" source="KR6g" target="KR6n" weight="0.00138550229209" />
+      <edge id="455" source="KR2o" target="KR2h" weight="0.00521625716872" />
+      <edge id="456" source="KR6o" target="KR6e" weight="0.0034492668814" />
+      <edge id="457" source="KR6o" target="KR6n" weight="0.0057176674422" />
+      <edge id="458" source="KR6e" target="KR6n" weight="0.00374479045574" />
+      <edge id="459" source="KR2e" target="KR2h" weight="0.000532919214215" />
+      <edge id="460" source="KR2e" target="KR1c" weight="0.000995355034811" />
+      <edge id="461" source="KR5a" target="KR6q" weight="0.000204061018751" />
+    </edges>
+  </graph>
+</gexf>
