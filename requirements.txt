@@ -1,6 +1,6 @@
 absl-py==0.7.1
 astor==0.7.1
-bleach==2.1.2
+bleach==3.1.1
 bottle==0.12.13
 brewer2mpl==1.4.1
 bz2file==0.98
