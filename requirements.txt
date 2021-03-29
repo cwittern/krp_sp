@@ -61,7 +61,7 @@ protobuf==3.7.1
 ptyprocess==0.5.2
 pybtex==0.21
 pycryptodome==3.4.7
-Pygments==2.2.0
+Pygments==2.7.4
 PyOrgMode==0.1
 pyorient==1.5.5
 pyparsing==2.2.0
