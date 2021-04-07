@@ -1,7 +1,7 @@
 absl-py==0.7.1
 astor==0.7.1
 bleach==2.1.2
-bottle==0.12.13
+bottle==0.12.19
 brewer2mpl==1.4.1
 bz2file==0.98
 certifi==2017.11.5
